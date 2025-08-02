@@ -119,13 +119,13 @@ public class WhackAMole extends Application {
       public void run() {
          // find current mole location if exists and hide mole
          if (locationIndex != -1) {
-            int counter = 0;
+            int index = 0;
             for (int i = 0; i < 3; i++) {
                for (int j = 0; j < 3; j++) {
-                  if (counter == locationIndex) {
+                  if (index == locationIndex) {
                      holePanes[i][j].hide();
                   }
-                  counter++;
+                  index++;
                }
             }
          }
@@ -135,13 +135,13 @@ public class WhackAMole extends Application {
          locationIndex = rand.nextInt(9);
 
          // find new mole location and pop out mole
-         int counter = 0;
+         int index = 0;
          for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-               if (counter == locationIndex) {
+               if (index == locationIndex) {
                   holePanes[i][j].popOut();
                }
-               counter++;
+               index++;
             }
          }
       }
