@@ -15,10 +15,10 @@ import java.util.TimerTask;
 
 /**
  * This WhackAMole class represents a simple Whack-a-Mole game using event-driven programming.
- * The program displays a 3x3 grid of holes and the game can started or stopped using the
+ * The program displays a 3 x 3 grid of holes and the game can started or stopped using the
  * respective buttons. Each hole is represented by a HolePane and a mole would pop in and out
  * of the holes randomly. If the mole is clicked on while popped out, it will be pushed back
- * into the hole and the game will display an "Ouch!!" text.The current mole location is tracked
+ * into the hole and the game will display an "Ouch!!" text. The current mole location is tracked
  * using a location index (0 to 8), and mole behavior is scheduled using a Timer and a TimerTask
  * (MolePopper).
  */
@@ -30,7 +30,7 @@ public class WhackAMole extends Application {
 
    /**
     * Sets up and displays the 3x3 grid of holes with start and stop buttons at the bottom. It also
-    * sets up the event handlers. When Start is clicked, all holes and text would be cleared in case, and
+    * sets up the event handlers. When Start is clicked, all holes and text would be cleared, and
     * a timer begins while moles pop up at different holes randomly. When the Stop is clicked, the timer
     * is cancelled. Each HolePane has an onMousePressed() handler that checks if the mole was whacked.
     * If so, it retrieves the source and cancels the timer to stop the game.
